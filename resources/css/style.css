@@ -1,6 +1,7 @@
 html{
   font-size: 18px;
-  font-family: helvetica;
+  font-family: Helvetica;
+  color: white;
 }
 
 .wide-960{
@@ -20,7 +21,6 @@ html {
 /* Header */
 header{
   background-color: black;
-  color: white;
   height: 2.32rem;
 }
 
@@ -49,9 +49,11 @@ header div span{
   background-size: cover;
 }
 
-.menu-holder{
-
-}
 .top-content{
-
+    margin-top: 9rem;
+    width: 20rem;
+    padding-left: 3rem;
+    padding-top: 2rem;
+    font-weight: bold;
+    background-color: black;
 }
