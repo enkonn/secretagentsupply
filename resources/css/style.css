@@ -1,0 +1,22 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Header */
+header{
+  background-color: black;
+  color: white;
+}
+
+header *{
+  display: inline;
+}
+
+.background-holder{
+  background-image: url(../images/moto.jpeg);
+}
