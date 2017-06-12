@@ -1,6 +1,11 @@
 html{
   font-size: 18px;
+  font-family: helvetica;
+}
 
+.wide-960{
+  width: 960px;
+  margin: auto;
 }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
@@ -16,13 +21,27 @@ html {
 header{
   background-color: black;
   color: white;
+  height: 2.32rem;
 }
 
-header *{
+header div *{
   display: inline;
 }
+/* Fix trouble under here. Img won't pad on top */
+header div img{
+  height: 1.5rem;
+  width: auto;
+  padding: 0 0.5rem;
+}
 
-.top-background-holder{
+header div span{
+  padding: 0.66rem 0.5rem;
+  border: 1px solid red;
+  overflow: auto;
+}
+/* Header says bye*/
+
+.top{
   background-image: url("../images/moto.jpeg");
   height: 25rem;
   width: 100%;
@@ -30,13 +49,8 @@ header *{
   background-size: cover;
 }
 
-.wide-960{
-  width: 960px;
-  margin: auto;
-}
-
 .menu-holder{
-  
+
 }
 .top-content{
 
