@@ -2,44 +2,38 @@ html{
   font-size: 18px;
   font-family: Helvetica;
   color: white;
+  margin: 0;
 }
 
 .wide-960{
   width: 960px;
+  height: inherit;
   margin: auto;
-}
-
-/* apply a natural box layout model to all elements, but allowing components to change */
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
+  display: block;
 }
 
 /* Header */
 header{
   background-color: black;
   height: 2.32rem;
+  position: relative;
+}
+header .wide-960 {
+  display: flex;
+  align-items: center;
 }
 
-header div *{
-  display: inline;
-}
-/* Fix trouble under here. Img won't pad on top */
 header div img{
   height: 1.5rem;
   width: auto;
   padding: 0 0.5rem;
 }
 
-header div span{
+header div p{
   padding: 0.66rem 0.5rem;
-  border: 1px solid red;
-  overflow: auto;
 }
 /* Header says bye*/
+
 
 .top{
   background-image: url("../images/moto.jpeg");
@@ -49,11 +43,169 @@ header div span{
   background-size: cover;
 }
 
-.top-content{
-    margin-top: 9rem;
-    width: 20rem;
-    padding-left: 3rem;
-    padding-top: 2rem;
-    font-weight: bold;
-    background-color: black;
+.upper-content{
+  position: relative;
+  top: 9rem;
+  width: 20rem;
+  padding: 2rem 3rem;
+  font-weight: bold;
+  background-color: black;
 }
+
+.upper-content h4{
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.upper-content h2{
+  font-size: 2rem;
+}
+/* Get back. Your site will be shit if you don't */
+
+/* NAV. Please help */
+nav{
+  background-color: firebrick;
+}
+
+nav li{
+  list-style-type: none;
+  padding: 0.75rem 0;
+}
+
+nav li a{
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+nav .menu{
+    display: none;
+}
+
+nav .wide-960{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/*Shopping list next*/
+
+.shop{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+ .list-item{
+  width: 30%;
+  height: 15rem;
+  margin-top: 3rem;
+  border: 4px solid black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+ .list-item img{
+  height: 9rem;
+  width: auto;
+  max-width: 80%;
+  padding: 2rem 0;
+  margin: auto;
+}
+
+ .list-item p{
+  background-color: black;
+  padding: 0.5rem;
+  width: auto;
+  text-align: center;
+}
+
+/* Shopping list ended there. */
+/* Store Features*/
+
+.store-feature{
+  width: 35%;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+
+.store-feature p:first-child{
+    background-color: black;
+    padding: 1rem 2rem;
+    color: inherit;
+}
+
+.store-feature p{
+  color: black;
+}
+/* No more store features*/
+
+/*Footer*/
+footer{
+  height: 5rem;
+  background-color: black;
+}
+
+footer .wide-960{
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width:1024px){
+  .wide-960{
+    width: auto;
+  }
+  
+  nav .menu {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      padding: 0.75rem 0;
+  }
+
+  nav .wide-960{
+    display: none;
+  }
+
+  nav div li a{
+    display: none;
+  }
+
+  .shop{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .list-item{
+   width: 47%;
+   flex-shrink: 1;
+  }
+
+  #glasses{
+    display: none;
+  }
+  .store-feature{
+    width: 35%;
+  }
+}
+
+@media only screen and (max-width:1024px) {
+
+}
+
+/*The End - Fred Quimby, William Hannah?*/
+
+/*
+Check Later
+
+apply a natural box layout model to all elements, but allowing components to change
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+*/
