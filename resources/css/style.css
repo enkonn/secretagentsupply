@@ -4,37 +4,33 @@ html{
   color: white;
   margin: 0;
 }
-
-.wide-960{
+.width-setter{
   width: 960px;
   height: inherit;
   margin: auto;
   display: block;
 }
 
-/* Header */
+/* Header below*/
 header{
   background-color: black;
   height: 2.32rem;
   position: relative;
 }
-header .wide-960 {
+header .width-setter {
   display: flex;
   align-items: center;
 }
-
 header div img{
   height: 1.5rem;
   width: auto;
   padding: 0 0.5rem;
 }
-
 header div p{
   padding: 0.66rem 0.5rem;
 }
-/* Header says bye*/
-
-
+/* Header above*/
+/*the inbetweeners below*/
 .top{
   background-image: url("../images/moto.jpeg");
   height: 25rem;
@@ -42,7 +38,6 @@ header div p{
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .upper-content{
   position: relative;
   top: 9rem;
@@ -51,52 +46,42 @@ header div p{
   font-weight: bold;
   background-color: black;
 }
-
 .upper-content h4{
   font-size: 1rem;
   margin-bottom: 0.25rem;
 }
-
 .upper-content h2{
   font-size: 2rem;
 }
-/* Get back. Your site will be shit if you don't */
-
-/* NAV. Please help */
+/*the inbetweeners above*/
+/* Nav \/ */
 nav{
   background-color: firebrick;
 }
-
 nav li{
   list-style-type: none;
   padding: 0.75rem 0;
 }
-
 nav li a{
   display: inline-block;
   color: inherit;
   text-decoration: none;
 }
-
 nav .menu{
     display: none;
 }
-
-nav .wide-960{
+nav .width-setter{
   display: flex;
   justify-content: space-between;
 }
-
-
+/* Nav /\ */
 /*Shopping list next*/
-
 .shop{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
- .list-item{
+.list-item{
   width: 30%;
   height: 15rem;
   margin-top: 3rem;
@@ -105,58 +90,53 @@ nav .wide-960{
   justify-content: center;
   flex-direction: column;
 }
-
- .list-item img{
+.list-item img{
   height: 9rem;
   width: auto;
   max-width: 80%;
   padding: 2rem 0;
-  margin: auto;
-}
-
- .list-item p{
+  margin: auto;}
+.list-item p{
   background-color: black;
   padding: 0.5rem;
   width: auto;
-  text-align: center;
-}
-
-/* Shopping list ended there. */
+  text-align: center;}
+/* Shopping list end*/
 /* Store Features*/
-
 .store-feature{
   width: 35%;
   margin-top: 3rem;
   margin-bottom: 4rem;
 }
-
 .store-feature p:first-child{
     background-color: black;
     padding: 1rem 2rem;
     color: inherit;
 }
-
 .store-feature p{
   color: black;
 }
-/* No more store features*/
+/* store features*/
 
 /*Footer*/
 footer{
   height: 5rem;
   background-color: black;
 }
-
-footer .wide-960{
+footer .width-setter{
   display: flex;
   align-items: center;
 }
+/* Footer end*/
 
+/* Desktop end*/
+
+/*Tab in landscape*/
 @media only screen and (max-width:1024px){
-  .wide-960{
+  .width-setter{
     width: auto;
   }
-  
+
   nav .menu {
       display: flex;
       justify-content: center;
@@ -164,11 +144,8 @@ footer .wide-960{
       padding: 0.75rem 0;
   }
 
-  nav .wide-960{
-    display: none;
-  }
-
-  nav div li a{
+  #glasses, nav div li a, nav .width-setter/* nav .width-setter is the nav list if it were on wide screen. Should've named better. :/ */
+  {
     display: none;
   }
 
@@ -179,33 +156,62 @@ footer .wide-960{
   }
 
   .list-item{
-   width: 47%;
-   flex-shrink: 1;
+    width: 47%;
   }
 
-  #glasses{
-    display: none;
-  }
   .store-feature{
     width: 35%;
   }
 }
 
-@media only screen and (max-width:1024px) {
-
+/* And Mobile*/
+@media only screen and (max-width:470px) {
+  .width-setter{
+    width: auto;
+  }
+  .top{
+    height: 15rem;
+  }
+  .upper-content{
+    top: 10rem;
+    width: auto;
+    padding: 1rem 2rem;
+  }
+  .upper-content h4{
+    font-size: 0.77rem;
+    margin-bottom: 0.25rem;
+  }
+  .upper-content h2{
+    font-size: 1rem;
+  }
+  .shop{
+    justify-content: center;
+  }
+  nav .menu {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      padding: 0.75rem 0;
+  }
+  #glasses, #watch, nav div li a, nav .width-setter {
+    display: none; /* nav .width-setter is the list if it were on wide screen. Should've named better. :/ */
+  }
+  .list-item, .store-feature{
+    width: 90%;
+  }
+  .store-feature{
+    margin: 0;
+    padding-bottom: 0.5rem;
+  }
+  .shop div:nth-child(4){
+    margin-top: 3rem;
+  }
+  footer{
+    margin-top: 3.5rem;
+  }
+  footer p{
+    margin: auto;
+  }
 }
 
-/*The End - Fred Quimby, William Hannah?*/
-
-/*
-Check Later
-
-apply a natural box layout model to all elements, but allowing components to change
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-*/
+/* ****The End****  */
